@@ -1,0 +1,61 @@
+<<<<<<< HEAD
+<h1>REGISTRAR TAREAS</h1>
+<div class="form">
+  <mat-card class="card">
+    <mat-card-title>Register Task</mat-card-title>
+    <mat-card-content>
+      <div class="container">
+        <mat-form-field>
+          <input
+            [(ngModel)]="registerTaskData.name"
+            matInput
+            placeholder="Name and lastname"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            [(ngModel)]="registerTaskData.description"
+            matInput
+            placeholder="Description"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            [(ngModel)]="registerTaskData.ImageUrl"
+            matInput
+            placeholder="Url de la imagen "
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            [(ngModel)]="registerTaskData.taskStatus"
+            matInput
+            placeholder="estado tarea "
+            required
+          />
+        </mat-form-field>
+        <!-- <select
+          [(ngModel)]="registerTaskData.taskStatus"
+          class="form-select"
+          id="inputGroupSelect01"
+        >
+          <option selected>...</option>
+          <option value="1">In-process</option>
+          <option value="2">To-do</option>
+          <option value="3">la otra</option>
+        </select> -->
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="registerTask()" class="button" mat-raised-button>
+        Register
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+=======
+<p>save-task works!</p>
+>>>>>>> 462c8b35d0ab0411b08bec7acaa9677ae0f2acb0
