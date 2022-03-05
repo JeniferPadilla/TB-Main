@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <mat-toolbar class="bgHeader">
   <ul>
@@ -17,26 +16,3 @@
     <a  *ngIf="_userService.loggedIn()" (click)="logout()" mat-button >Logout</a>
   </ul>
 </mat-toolbar>
-=======
-<mat-toolbar color="primary">
-  <ul>
-    <a *ngIf="_userService.loggedIn()" routerLink="listTask"> List task </a>
-  </ul>
-
-  <ul>
-    <a *ngIf="_userService.loggedIn()" routerLink="saveTask"> Create task </a>
-  </ul>
-  <ul>
-    <a *ngIf="_userService.loggedIn()" routerLink="listUser"> Admin </a>
-  </ul>
-  <span class="headerSpacer"></span>
-  <ul>
-    <a *ngIf="!_userService.loggedIn()" mat-button routerLink="signUp"> Sign up </a>
-    <a *ngIf="!_userService.loggedIn()" mat-button routerLink="login"> Login </a>
-    <a *ngIf="_userService.loggedIn()" (click)="logout()" mat-button> Logout </a>
-  </ul>
-</mat-toolbar>
-
-<!-- con angular en el html podemos hacer condicionales y ciclos
-*ngIf es un if - else -, con negacion para si no hay un token que le de la opcion de login  -->
->>>>>>> 462c8b35d0ab0411b08bec7acaa9677ae0f2acb0

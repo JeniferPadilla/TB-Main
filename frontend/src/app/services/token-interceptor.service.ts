@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-<<<<<<< HEAD
 import { HttpInterceptor } from '@angular/common/http';
 import { UserService } from './user.service';
 
@@ -18,13 +17,4 @@ export class TokenInterceptorService implements HttpInterceptor {
     });
     return next.handle(tokenReq); //
   }
-=======
-
-@Injectable({
-  providedIn: 'root'
-})
-export class TokenInterceptorService {
-
-  constructor() { }
->>>>>>> 462c8b35d0ab0411b08bec7acaa9677ae0f2acb0
 }

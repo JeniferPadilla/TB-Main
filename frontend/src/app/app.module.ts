@@ -21,7 +21,6 @@ import { TaskService } from './services/task.service';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { AuthGuard } from './guard/auth.guard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-<<<<<<< HEAD
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -35,18 +34,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import {CdkAccordionModule} from '@angular/cdk/accordion';
 import {MatIconModule} from '@angular/material/icon';
-=======
-
-import { FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { HttpClientModule } from "@angular/common/http";
-
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatButtonModule} from '@angular/material/button';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatCardModule} from '@angular/material/card';
-import {MatInputModule} from '@angular/material/input';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
->>>>>>> 462c8b35d0ab0411b08bec7acaa9677ae0f2acb0
 
 
 @NgModule({
@@ -64,10 +51,6 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     RegisterRoleComponent,
     ListRoleComponent,
     UpdateRoleComponent,
-<<<<<<< HEAD
-=======
-    
->>>>>>> 462c8b35d0ab0411b08bec7acaa9677ae0f2acb0
   ],
   imports: [
     BrowserModule,
@@ -81,7 +64,6 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatFormFieldModule,
     MatCardModule,
     MatInputModule,
-<<<<<<< HEAD
     MatSnackBarModule,
     CdkAccordionModule,
     MatIconModule
@@ -100,12 +82,3 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-=======
-    MatSnackBarModule
-
-  ],
-  providers: [UserService, RoleService, TaskService, TokenInterceptorService, AuthGuard],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
->>>>>>> 462c8b35d0ab0411b08bec7acaa9677ae0f2acb0

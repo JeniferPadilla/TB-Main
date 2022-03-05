@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { TaskService } from '../../services/task.service';
 import { Router } from '@angular/router';
 import {
@@ -7,13 +6,10 @@ import {
   MatSnackBarHorizontalPosition,
   MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
-=======
->>>>>>> 462c8b35d0ab0411b08bec7acaa9677ae0f2acb0
 
 @Component({
   selector: 'app-save-task',
   templateUrl: './save-task.component.html',
-<<<<<<< HEAD
   styleUrls: ['./save-task.component.css'],
 })
 export class SaveTaskComponent implements OnInit {
@@ -42,7 +38,6 @@ export class SaveTaskComponent implements OnInit {
     } else {
       this._taskService.registerTask(this.registerTaskData).subscribe({
         next: (v) => {
-          localStorage.setItem('token', v.token);
           this._router.navigate(['/listTask']);
           this.message = 'Sucesful task registration';
           this.openSnackBarSuccesfull();
@@ -74,15 +69,5 @@ export class SaveTaskComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-=======
-  styleUrls: ['./save-task.component.css']
-})
-export class SaveTaskComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
->>>>>>> 462c8b35d0ab0411b08bec7acaa9677ae0f2acb0
 }
+
