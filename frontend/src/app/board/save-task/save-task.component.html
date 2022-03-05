@@ -22,30 +22,22 @@
         </mat-form-field>
         <mat-form-field>
           <input
-            [(ngModel)]="registerTaskData.ImageUrl"
+            [(ngModel)]="registerTaskData.imageUrl"
             matInput
             placeholder="Url de la imagen "
             required
           />
         </mat-form-field>
-        <mat-form-field>
-          <input
-            [(ngModel)]="registerTaskData.taskStatus"
-            matInput
-            placeholder="estado tarea "
-            required
-          />
-        </mat-form-field>
-        <!-- <select
-          [(ngModel)]="registerTaskData.taskStatus"
+        <select
           class="form-select"
-          id="inputGroupSelect01"
+          aria-label="Default select example"
+          [(ngModel)]="registerTaskData.taskStatus"
         >
-          <option selected>...</option>
-          <option value="1">In-process</option>
-          <option value="2">To-do</option>
-          <option value="3">la otra</option>
-        </select> -->
+          <option selected>Seleccione un estado de tarea</option>
+          <option value="in-process">In-process</option>
+          <option value="to-do">To-do</option>
+          <option value="finished">Finished</option>
+        </select>
       </div>
     </mat-card-content>
     <mat-card-actions>
@@ -55,4 +47,3 @@
     </mat-card-actions>
   </mat-card>
 </div>
-
