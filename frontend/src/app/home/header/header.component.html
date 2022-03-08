@@ -4,15 +4,16 @@
     <a *ngIf="_userService.loggedIn()" routerLink="listTask">List Task</a>
   </ul>
   <ul>
-    <a *ngIf="_userService.loggedIn()" routerLink="saveTask">create Task</a>
+    <a *ngIf="_userService.loggedIn()" routerLink="saveTask">Create Task</a>
   </ul>
   <ul>
-    <a *ngIf="_userService.loggedIn()" routerLink="listUser">Admin</a>
+    <a *ngIf="_userService.loggedIn()" routerLink="listUser"><i class="fas fa-user-lock"></i>Admin</a>
   </ul>
   <span class="headerSpacer"></span>
   <ul>
+    <a><i class="fas fa-tasks"></i></a>
     <a  *ngIf="!_userService.loggedIn()" mat-button routerLink="signUp">sign up</a>
     <a *ngIf="!_userService.loggedIn()" mat-button routerLink="login">login</a>
-    <a  *ngIf="_userService.loggedIn()" (click)="logout()" mat-button >Logout</a>
+   <a  *ngIf="_userService.loggedIn()" (click)="logout()" mat-button ><img src="https://cdn-icons-png.flaticon.com/512/25/25376.png" width="20" height="20">  Logout</a>
   </ul>
 </mat-toolbar>

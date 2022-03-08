@@ -1,15 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
-html,
-body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.styleSnackBarError{
-    background-color: #d34e4e;
-    color: #fff;
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-image: url(https://th.bing.com/th/id/OIP.CkbkNwA1E6n3IxOwbgrvqgHaJ5?pid=ImgDet&rs=1);
+position: relative;
+padding-bottom: 13em;
+min-height: 100vh;
 }
 
-.styleSnackBarSuccesfull{
-    background-color: #4ed360;
-    color: #fff;
+.styleSnackBarError {
+  background-color: #d34e4e;
+  color: #fff;
+}
+
+.styleSnackBarSuccesfull {
+  background-color: #4ed360;
+  color: #fff;
 }

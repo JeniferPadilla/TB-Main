@@ -8,19 +8,18 @@ const saveTask = async (req, res) => {
     userId: req.user._id,
     name: req.body.name,
     description: req.body.description,
-    taskStatus: req.body.taskStatus,
+    taskStatus: "to-do",
     imageUrl: req.body.imageUrl,
   });
-console.log("hola");
+
   const result = await boardSchema.save();
   return !result
     ? res.status(400).send({ message: "Error registering task" })
     : res.status(200).send({ result });
-  
 };
 
 const listTask = async (req, res) => {
-  const taskList = await task.find({ userId: req.user._id });
+  const taskList = await task.find({ userId:req.user._id });
   return taskList.length === 0
     ? res.status(400).send({ message: "You have no assigned tasks" })
     : res.status(200).send({ taskList });

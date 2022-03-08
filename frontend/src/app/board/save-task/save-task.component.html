@@ -1,7 +1,6 @@
-<h1>REGISTRAR TAREAS</h1>
 <div class="form">
   <mat-card class="card">
-    <mat-card-title>Register Task</mat-card-title>
+    <mat-card-title style="text-align: center;">Register Task</mat-card-title>
     <mat-card-content>
       <div class="container">
         <mat-form-field>
@@ -28,7 +27,7 @@
             required
           />
         </mat-form-field>
-        <select
+        <!-- <select
           class="form-select"
           aria-label="Default select example"
           [(ngModel)]="registerTaskData.taskStatus"
@@ -37,11 +36,11 @@
           <option value="in-process">In-process</option>
           <option value="to-do">To-do</option>
           <option value="finished">Finished</option>
-        </select>
+        </select> -->
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button (click)="registerTask()" class="button" mat-raised-button>
+      <button (click)="registerTask()" class="button" mat-raised-button style="margin-left: 25%;">
         Register
       </button>
     </mat-card-actions>

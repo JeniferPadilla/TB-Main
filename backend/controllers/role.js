@@ -40,7 +40,7 @@ const updateRole = async (req, res) => {
 
 const deleteRole = async (req, res) => {
   const deletedRole = await Role.findByIdAndUpdate(
-    { _id: req.params["_id"] },
+    { _id: req.body._id},
     { dbStatus: false }
   );
   return !deletedRole

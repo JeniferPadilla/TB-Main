@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskService } from '../../services/task.service';
 
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-list-task',
@@ -7,9 +13,49 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-task.component.css'],
 })
 export class ListTaskComponent implements OnInit {
-  
-  constructor() {}
+  taskData: any;
+  message: string = '';
+  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
+  durationInSeconds: number = 2000;
 
- 
-  ngOnInit(): void {}
+  constructor(
+    private _taskService: TaskService,
+    private _snackBark: MatSnackBar
+  ) {
+    this.taskData = {};
+  }
+
+  ngOnInit(): void {
+    this._taskService.listTask().subscribe({
+      next: (v) => {
+        this.taskData= v.taskList;
+      },
+      error: (e) => {
+        this.message= e.error.message;
+        this.openSnackBarkError();
+      },
+    });
+  }
+
+  updateTask(task: any, status: string) {}
+
+  deleteTask(task: any) {}
+
+  openSnackBarSuccesfull() {
+    this._snackBark.open(this.message, ' X ', {
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
+      duration: this.durationInSeconds,
+      panelClass: ['styleSnackBarkSuccesfull'],
+    });
+  }
+  openSnackBarkError() {
+    this._snackBark.open(this.message, ' X ', {
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
+      duration: this.durationInSeconds,
+      panelClass: ['styleSnackBarkError'],
+    });
+  }
 }

@@ -18,7 +18,6 @@ const doNotChanges = async (req, res, next) => {
 };
 
 const getRoleUser = async (req, res, next) => {
-  
   const role = await Role.findOne({ name: "user" });
   if (!role) return res.status(400).send({ message: "error assigning role" });
 

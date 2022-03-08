@@ -34,6 +34,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import {CdkAccordionModule} from '@angular/cdk/accordion';
 import {MatIconModule} from '@angular/material/icon';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatInputModule,
     MatSnackBarModule,
     CdkAccordionModule,
-    MatIconModule
+    MatIconModule,
+    MatExpansionModule,
   ],
   providers: [
     UserService,

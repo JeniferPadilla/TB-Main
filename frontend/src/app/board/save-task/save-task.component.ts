@@ -30,8 +30,7 @@ export class SaveTaskComponent implements OnInit {
     if (
       !this.registerTaskData.name ||
       !this.registerTaskData.description ||
-      !this.registerTaskData.imageUrl ||
-      !this.registerTaskData.taskStatus
+      !this.registerTaskData.imageUrl
     ) {
       this.message = 'Incomplete data';
       this.openSnackBarError();

@@ -123,7 +123,7 @@ const updateUserAdmin = async (req, res) => {
   const userUpdated = await User.findByIdAndUpdate(req.body._id, {
     name: req.body.name,
     password: pass,
-    role: req.body.role
+    role: req.body.role,
   });
 
   return !userUpdated
@@ -131,12 +131,12 @@ const updateUserAdmin = async (req, res) => {
     : res.status(200).send({ message: "User updated" });
 };
 
-//realizamos update para que un mismo usuario se actualice 
+//realizamos update para que un mismo usuario se actualice
 const updateUser = async (req, res) => {
   console.log(req.user);
-  if (!req.body._id ||!req.body.name || !req.body.email)
+  if (!req.body._id || !req.body.name || !req.body.email)
     return res.status(400).send({ message: "Incomplete data" });
-  
+
   let pass = "";
 
   if (!req.body.password) {
@@ -152,7 +152,6 @@ const updateUser = async (req, res) => {
   if (changes)
     return res.status(400).send({ mesagge: "you didn't make any changes" });
 
-  //¿Qué sucede con el rol?
   const userUpdated = await User.findByIdAndUpdate(req.body._id, {
     name: req.body.name,
     password: pass,
@@ -163,12 +162,10 @@ const updateUser = async (req, res) => {
     : res.status(200).send({ message: "User updated" });
 };
 
-
-
 const deleteUser = async (req, res) => {
-  if (!req.params["_id"]) return res.status(400).send("Incomplete data");
+  if (!req.body._id) return res.status(400).send("Incomplete data");
 
-  const userDeleted = await User.findByIdAndUpdate(req.params["_id"], {
+  const userDeleted = await User.findByIdAndUpdate(req.body._id, {
     dbStatus: false,
   });
   return !userDeleted
@@ -185,7 +182,7 @@ const login = async (req, res) => {
     return res.status(400).send({ message: "Wrong email or password" });
 
   if (!userLogin.dbStatus)
-  return res.status(400).send({ message: "Wrong email or password" });
+    return res.status(400).send({ message: "Wrong email or password" });
 
   let pass = await bcrypt.hassCompare(req.body.password, userLogin.password);
 
@@ -208,5 +205,5 @@ export default {
   deleteUser,
   login,
   getUserRole,
-  updateUserAdmin
+  updateUserAdmin,
 };

@@ -15,7 +15,9 @@
     flex-direction: column;
 }
 .button{
-    width: 100%;
-    background-color: #d0ee27;
+    width: 50%;
+    background-color: #bed82d;
     color: black;
+    margin-left: 25%;
+    
 }

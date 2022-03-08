@@ -9,12 +9,15 @@ ul{
 a{
     text-decoration: none;
     color: #252121;
+    font-size: 100%;
 }
 a:hover {
-    color: #e2fa0e;
+    color: #f33100;
     transition: 0.4s;
   }
 
 .bgHeader{
-    background-color: #c353df;
+    background-color: #3883d8;
 }
+
+

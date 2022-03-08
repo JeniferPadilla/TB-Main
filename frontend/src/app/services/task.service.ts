@@ -16,4 +16,10 @@ export class TaskService {
     return this._http.post<any>
     (this.env + 'task/saveTask', task);
   }
+
+  listTask(){
+    return this._http.get<any>
+    (this.env + 'task/listTask');
+  }
+  
 }

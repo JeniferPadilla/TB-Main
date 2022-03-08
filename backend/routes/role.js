@@ -10,6 +10,6 @@ const router = express.Router();
 // router.get("/list/:name?", auth, admin, role.roleList);
 // router.get("/find/:_id", auth, admin,validId, role.getRoleById);
 // router.put("/update",auth, admin, roleMidd.doNotChanges, role.updateRole);
-// router.put("/delete/:_id", auth, admin,validId, role.deleteRole);
+// router.put("/delete", auth, admin,validId, role.deleteRole);
 
-export default router; 
+export default router;
